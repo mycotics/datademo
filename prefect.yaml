@@ -17,16 +17,16 @@ pull:
 - prefect.deployments.steps.git_clone:
     repository: git@github.com:mycotics/datademo.git
     branch: master
-    access_token: '{{ prefect.blocks.secret.deployment-default-my-elt-flow-repo-token
+    access_token: '{{ prefect.blocks.secret.deployment-demo-deployment-my-elt-flow-repo-token
       }}'
 
 # the deployments section allows you to provide configuration for deploying flows
 deployments:
-- name: default
+- name: demo_deployment
   version: null
   tags: []
   description: null
-  entrypoint: orchestration/base_workflow.py:my_elt_flow
+  entrypoint: datademo/orchestration/base_workflow.py:my_elt_flow
   parameters: {}
   work_pool:
     name: test

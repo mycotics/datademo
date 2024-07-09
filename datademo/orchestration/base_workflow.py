@@ -41,7 +41,7 @@ def run_airbyte_sync2() -> str:
 
 @task(name="Extract, Load with Airbyte 3")
 def run_airbyte_sync3(a, b) -> str:
-    print('||||'.join([a,b]) )
+    print('||  ---   ||'.join([a,b]) )
     return ','.join([a,b])
     # return ','.join([a,b])
     # job_run = connection.trigger()
